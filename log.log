@@ -1,0 +1,75 @@
+2026-02-24 12:40:34.885 | INFO     | __main__:main:137 - Устройство запущено. Ожидание сообщений...
+2026-02-24 12:40:34.943 | INFO     | __main__:on_message:89 - Пришло сообщение: <paho.mqtt.client.Client object at 0x00000200C2C32380>, None, <paho.mqtt.client.MQTTMessage object at 0x00000200C2C88040>, SP008/connected, b'1'
+2026-02-24 12:40:45.793 | INFO     | __main__:main:141 - Получен сигнал остановки
+2026-02-24 13:04:26.665 | INFO     | __main__:main:149 - Устройство запущено. Ожидание сообщений...
+2026-02-24 13:04:26.724 | INFO     | __main__:on_message:95 - Пришло сообщение: <paho.mqtt.client.Client object at 0x0000018AFFD4AE00>, None, <paho.mqtt.client.MQTTMessage object at 0x0000018AFFD940B0>, SP008/connected, b'1'
+2026-02-24 13:04:41.439 | INFO     | __main__:on_message:95 - Пришло сообщение: <paho.mqtt.client.Client object at 0x0000018AFFD4AE00>, None, <paho.mqtt.client.MQTTMessage object at 0x0000018AFFD940B0>, SP008/open, b'1'
+2026-02-24 13:04:45.022 | INFO     | __main__:on_message:95 - Пришло сообщение: <paho.mqtt.client.Client object at 0x0000018AFFD4AE00>, None, <paho.mqtt.client.MQTTMessage object at 0x0000018AFFD940B0>, SP008/close, b'1'
+2026-02-24 13:05:19.495 | INFO     | __main__:main:153 - Получен сигнал остановки
+2026-02-24 13:05:20.729 | INFO     | __main__:main:149 - Устройство запущено. Ожидание сообщений...
+2026-02-24 13:05:48.782 | INFO     | __main__:main:153 - Получен сигнал остановки
+2026-02-24 13:08:18.933 | INFO     | __main__:main:149 - Устройство запущено. Ожидание сообщений...
+2026-02-24 13:12:44.145 | INFO     | __main__:main:153 - Получен сигнал остановки
+2026-02-24 13:12:45.292 | INFO     | __main__:main:149 - Устройство запущено. Ожидание сообщений...
+2026-02-24 13:12:45.373 | INFO     | __main__:on_message:95 - Пришло сообщение: <paho.mqtt.client.Client object at 0x00000258FFDE2D40>, None, <paho.mqtt.client.MQTTMessage object at 0x00000258FFE240B0>, SP008/connected, b'1'
+2026-02-24 13:12:49.732 | INFO     | __main__:on_message:95 - Пришло сообщение: <paho.mqtt.client.Client object at 0x00000258FFDE2D40>, None, <paho.mqtt.client.MQTTMessage object at 0x00000258FFE240B0>, SP008/close, b'1'
+2026-02-24 13:12:56.929 | INFO     | __main__:on_message:95 - Пришло сообщение: <paho.mqtt.client.Client object at 0x00000258FFDE2D40>, None, <paho.mqtt.client.MQTTMessage object at 0x00000258FFE240B0>, SP008/open, b'1'
+2026-02-24 13:13:05.330 | INFO     | __main__:on_message:95 - Пришло сообщение: <paho.mqtt.client.Client object at 0x00000258FFDE2D40>, None, <paho.mqtt.client.MQTTMessage object at 0x00000258FFE240B0>, SP008/open, b'1'
+2026-02-24 13:13:10.340 | INFO     | __main__:on_message:95 - Пришло сообщение: <paho.mqtt.client.Client object at 0x00000258FFDE2D40>, None, <paho.mqtt.client.MQTTMessage object at 0x00000258FFE240B0>, SP008/close, b'1'
+2026-02-24 13:13:22.882 | INFO     | __main__:on_message:95 - Пришло сообщение: <paho.mqtt.client.Client object at 0x00000258FFDE2D40>, None, <paho.mqtt.client.MQTTMessage object at 0x00000258FFE240B0>, SP008/open, b'1'
+2026-02-24 13:13:27.889 | INFO     | __main__:on_message:95 - Пришло сообщение: <paho.mqtt.client.Client object at 0x00000258FFDE2D40>, None, <paho.mqtt.client.MQTTMessage object at 0x00000258FFE240B0>, SP008/close, b'1'
+2026-02-24 13:13:27.890 | INFO     | __main__:on_message:95 - Пришло сообщение: <paho.mqtt.client.Client object at 0x00000258FFDE2D40>, None, <paho.mqtt.client.MQTTMessage object at 0x00000258FFE240B0>, SP008/close, b'1'
+2026-02-24 13:14:45.251 | INFO     | __main__:on_message:95 - Пришло сообщение: <paho.mqtt.client.Client object at 0x00000258FFDE2D40>, None, <paho.mqtt.client.MQTTMessage object at 0x00000258FFE240B0>, SP008/lightup, b'1'
+2026-02-24 13:15:32.026 | INFO     | __main__:main:153 - Получен сигнал остановки
+2026-02-24 13:15:33.097 | INFO     | __main__:main:151 - Устройство запущено. Ожидание сообщений...
+2026-02-24 13:15:33.171 | INFO     | __main__:on_message:97 - Пришло сообщение: <paho.mqtt.client.Client object at 0x000001CAA195AF20>, None, <paho.mqtt.client.MQTTMessage object at 0x000001CAA199C190>, SP008/connected, b'1'
+2026-02-24 13:15:35.651 | INFO     | __main__:on_message:97 - Пришло сообщение: <paho.mqtt.client.Client object at 0x000001CAA195AF20>, None, <paho.mqtt.client.MQTTMessage object at 0x000001CAA199C190>, SP008/lightup, b'1'
+2026-02-24 13:16:03.050 | INFO     | __main__:on_message:97 - Пришло сообщение: <paho.mqtt.client.Client object at 0x000001CAA195AF20>, None, <paho.mqtt.client.MQTTMessage object at 0x000001CAA199C190>, SP008/lightup, b'0'
+2026-02-24 13:17:37.731 | INFO     | __main__:main:155 - Получен сигнал остановки
+2026-02-24 13:17:38.407 | INFO     | __main__:main:155 - Устройство запущено. Ожидание сообщений...
+2026-02-24 13:17:38.466 | INFO     | __main__:on_message:101 - Пришло сообщение: <paho.mqtt.client.Client object at 0x000001EDAF8D30A0>, None, <paho.mqtt.client.MQTTMessage object at 0x000001EDAF91C2E0>, SP008/connected, b'1'
+2026-02-24 13:17:42.851 | INFO     | __main__:on_message:101 - Пришло сообщение: <paho.mqtt.client.Client object at 0x000001EDAF8D30A0>, None, <paho.mqtt.client.MQTTMessage object at 0x000001EDAF91C2E0>, SP008/lightup, b'1'
+2026-02-24 13:19:30.155 | INFO     | __main__:main:159 - Получен сигнал остановки
+2026-02-24 13:19:31.387 | INFO     | __main__:main:156 - Устройство запущено. Ожидание сообщений...
+2026-02-24 13:19:31.446 | INFO     | __main__:on_message:102 - Пришло сообщение: <paho.mqtt.client.Client object at 0x000001F1B91E3190>, None, <paho.mqtt.client.MQTTMessage object at 0x000001F1B922C2E0>, SP008/connected, b'1'
+2026-02-24 13:19:38.900 | INFO     | __main__:on_message:102 - Пришло сообщение: <paho.mqtt.client.Client object at 0x000001F1B91E3190>, None, <paho.mqtt.client.MQTTMessage object at 0x000001F1B922C2E0>, SP008/lightup, b'1'
+2026-02-24 13:20:35.819 | INFO     | __main__:main:160 - Получен сигнал остановки
+2026-02-24 13:20:36.204 | INFO     | __main__:main:157 - Устройство запущено. Ожидание сообщений...
+2026-02-24 13:20:36.265 | INFO     | __main__:on_message:103 - Пришло сообщение: <paho.mqtt.client.Client object at 0x0000024093953220>, None, <paho.mqtt.client.MQTTMessage object at 0x000002409399C270>, SP008/connected, b'1'
+2026-02-24 13:20:44.716 | INFO     | __main__:on_message:103 - Пришло сообщение: <paho.mqtt.client.Client object at 0x0000024093953220>, None, <paho.mqtt.client.MQTTMessage object at 0x000002409399C270>, SP008/lightup, b'1'
+2026-02-24 13:21:23.868 | INFO     | __main__:main:161 - Получен сигнал остановки
+2026-02-24 13:21:24.316 | INFO     | __main__:main:155 - Устройство запущено. Ожидание сообщений...
+2026-02-24 13:21:24.376 | INFO     | __main__:on_message:101 - Пришло сообщение: <paho.mqtt.client.Client object at 0x0000021345BA30D0>, None, <paho.mqtt.client.MQTTMessage object at 0x0000021345BEC2E0>, SP008/connected, b'1'
+2026-02-24 13:21:26.532 | INFO     | __main__:on_message:101 - Пришло сообщение: <paho.mqtt.client.Client object at 0x0000021345BA30D0>, None, <paho.mqtt.client.MQTTMessage object at 0x0000021345BEC2E0>, SP008/lightup, b'1'
+2026-02-24 13:22:12.192 | INFO     | __main__:main:159 - Получен сигнал остановки
+2026-02-24 13:22:13.316 | INFO     | __main__:main:156 - Устройство запущено. Ожидание сообщений...
+2026-02-24 13:22:13.375 | INFO     | __main__:on_message:102 - Пришло сообщение: <paho.mqtt.client.Client object at 0x00000174150530D0>, None, <paho.mqtt.client.MQTTMessage object at 0x000001741509C270>, SP008/connected, b'1'
+2026-02-24 13:22:15.045 | INFO     | __main__:on_message:102 - Пришло сообщение: <paho.mqtt.client.Client object at 0x00000174150530D0>, None, <paho.mqtt.client.MQTTMessage object at 0x000001741509C270>, SP008/lightup, b'1'
+2026-02-24 13:22:33.427 | INFO     | __main__:main:160 - Получен сигнал остановки
+2026-02-24 13:22:34.627 | INFO     | __main__:main:155 - Устройство запущено. Ожидание сообщений...
+2026-02-24 13:22:34.687 | INFO     | __main__:on_message:101 - Пришло сообщение: <paho.mqtt.client.Client object at 0x000001EABAA630D0>, None, <paho.mqtt.client.MQTTMessage object at 0x000001EABAAAC2E0>, SP008/connected, b'1'
+2026-02-24 13:22:37.022 | INFO     | __main__:on_message:101 - Пришло сообщение: <paho.mqtt.client.Client object at 0x000001EABAA630D0>, None, <paho.mqtt.client.MQTTMessage object at 0x000001EABAAAC2E0>, SP008/lightup, b'1'
+2026-02-24 13:23:00.397 | INFO     | __main__:main:159 - Получен сигнал остановки
+2026-02-24 13:23:01.572 | INFO     | __main__:main:155 - Устройство запущено. Ожидание сообщений...
+2026-02-24 13:23:01.631 | INFO     | __main__:on_message:101 - Пришло сообщение: <paho.mqtt.client.Client object at 0x00000172A3823160>, None, <paho.mqtt.client.MQTTMessage object at 0x00000172A386C350>, SP008/connected, b'1'
+2026-02-24 13:23:03.285 | INFO     | __main__:on_message:101 - Пришло сообщение: <paho.mqtt.client.Client object at 0x00000172A3823160>, None, <paho.mqtt.client.MQTTMessage object at 0x00000172A386C350>, SP008/lightup, b'1'
+2026-02-24 13:23:59.605 | INFO     | __main__:main:159 - Получен сигнал остановки
+2026-02-24 13:24:00.186 | INFO     | __main__:main:156 - Устройство запущено. Ожидание сообщений...
+2026-02-24 13:24:00.249 | INFO     | __main__:on_message:102 - Пришло сообщение: <paho.mqtt.client.Client object at 0x0000014E8FBC3190>, None, <paho.mqtt.client.MQTTMessage object at 0x0000014E8FC0C2E0>, SP008/connected, b'1'
+2026-02-24 13:24:02.725 | INFO     | __main__:on_message:102 - Пришло сообщение: <paho.mqtt.client.Client object at 0x0000014E8FBC3190>, None, <paho.mqtt.client.MQTTMessage object at 0x0000014E8FC0C2E0>, SP008/lightup, b'1'
+2026-02-24 13:24:06.277 | INFO     | __main__:on_message:102 - Пришло сообщение: <paho.mqtt.client.Client object at 0x0000014E8FBC3190>, None, <paho.mqtt.client.MQTTMessage object at 0x0000014E8FC0C2E0>, SP008/lightup, b'0'
+2026-02-24 13:24:09.269 | INFO     | __main__:on_message:102 - Пришло сообщение: <paho.mqtt.client.Client object at 0x0000014E8FBC3190>, None, <paho.mqtt.client.MQTTMessage object at 0x0000014E8FC0C2E0>, SP008/lightup, b'5'
+2026-02-24 13:24:09.269 | INFO     | __main__:handle_light_up_message:92 - Неизвестное значение в сообщении lightup
+2026-02-24 13:24:16.881 | INFO     | __main__:main:160 - Получен сигнал остановки
+2026-02-24 13:24:53.088 | INFO     | __main__:main:157 - Устройство запущено. Ожидание сообщений...
+2026-02-24 13:24:53.148 | INFO     | __main__:on_message:103 - Пришло сообщение: <paho.mqtt.client.Client object at 0x0000023F7C8E31F0>, None, <paho.mqtt.client.MQTTMessage object at 0x0000023F7C92C270>, SP008/connected, b'1'
+2026-02-24 13:25:13.470 | INFO     | __main__:on_message:103 - Пришло сообщение: <paho.mqtt.client.Client object at 0x0000023F7C8E31F0>, None, <paho.mqtt.client.MQTTMessage object at 0x0000023F7C92C270>, SP008/lightup, b'1'
+2026-02-24 13:25:18.678 | INFO     | __main__:on_message:103 - Пришло сообщение: <paho.mqtt.client.Client object at 0x0000023F7C8E31F0>, None, <paho.mqtt.client.MQTTMessage object at 0x0000023F7C92C270>, SP008/lightup, b'0'
+2026-02-24 13:25:21.630 | INFO     | __main__:on_message:103 - Пришло сообщение: <paho.mqtt.client.Client object at 0x0000023F7C8E31F0>, None, <paho.mqtt.client.MQTTMessage object at 0x0000023F7C92C270>, SP008/lightup, b'5'
+2026-02-24 13:25:21.630 | INFO     | __main__:handle_light_up_message:92 - Неизвестное значение в сообщении lightup
+2026-02-24 13:27:09.197 | INFO     | __main__:main:161 - Получен сигнал остановки
+2026-02-24 13:27:10.203 | INFO     | __main__:main:159 - Устройство запущено. Ожидание сообщений...
+2026-02-24 13:27:10.263 | INFO     | __main__:on_message:105 - Пришло сообщение: <paho.mqtt.client.Client object at 0x00000268EE8A7280>, None, <paho.mqtt.client.MQTTMessage object at 0x00000268EE8EC350>, SP008/connected, b'1'
+2026-02-24 13:27:59.775 | INFO     | __main__:on_message:105 - Пришло сообщение: <paho.mqtt.client.Client object at 0x00000268EE8A7280>, None, <paho.mqtt.client.MQTTMessage object at 0x00000268EE8EC350>, SP008/lightup, b'1'
+2026-02-24 13:28:05.671 | INFO     | __main__:on_message:105 - Пришло сообщение: <paho.mqtt.client.Client object at 0x00000268EE8A7280>, None, <paho.mqtt.client.MQTTMessage object at 0x00000268EE8EC350>, SP008/open, b'1'
+2026-02-24 13:28:17.959 | INFO     | __main__:on_message:105 - Пришло сообщение: <paho.mqtt.client.Client object at 0x00000268EE8A7280>, None, <paho.mqtt.client.MQTTMessage object at 0x00000268EE8EC350>, SP008/echo, b'1'
