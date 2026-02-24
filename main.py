@@ -4,6 +4,8 @@ import config
 import time
 from logger import logger
 import os
+from GPIOHandler import GPIOHandler
+import gpio4
 
 class MQTTClient:
     open_message_format = re.compile(
@@ -156,6 +158,8 @@ def main():
         config.BROKER_ADDRESS,
         config.PORT
     )
+
+    gpio_handler = GPIOHandler(pin_number=6)
     try:
         logger.info("Устройство запущено. Ожидание сообщений...")
         while True:
@@ -163,6 +167,7 @@ def main():
     except KeyboardInterrupt:
         logger.info("Получен сигнал остановки")
     finally:
+        gpio_handler.stop()
         mqtt_client.disconnect()
 
 
