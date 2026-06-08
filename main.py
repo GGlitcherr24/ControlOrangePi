@@ -36,7 +36,6 @@ class MQTTClient:
         self._connect()
 
     def _connect(self):
-        logger.info(f"USER: {self.username, self.password}, {self.broker_domain, self.broker_port}")
         try:
             self._client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
             self._client.username_pw_set(self.username, self.password)
@@ -76,7 +75,7 @@ class MQTTClient:
         logger.info(f"messages={messages}")
 
     def handle_open_message(self, matched_topic, client, userdata, msg):
-        logger.info(f"OPEN: {matched_topic}, {client}, {userdata}, {msg}")
+        logger.info(f"open: {matched_topic}, {client}, {userdata}, {msg}")
         os.system(config.COMMAND_ON_LOCK)
         os.system(config.COMMAND_ON_BEEPER)
         time.sleep(5)
@@ -84,15 +83,15 @@ class MQTTClient:
         os.system(config.COMMAND_OFF_BEEPER)
 
     def handle_close_message(self, matched_topic, client, userdata, msg):
-        logger.info(f"CLOSE: {matched_topic}, {client}, {userdata}, {msg}")
+        logger.info(f"close: {matched_topic}, {client}, {userdata}, {msg}")
         os.system(config.COMMAND_OFF_LOCK)
         os.system(config.COMMAND_OFF_BEEPER)
 
     def handle_echo_message(self, matched_topic, client, userdata, msg):
-        logger.info(f"ECHO: {matched_topic}, {client}, {userdata}, {msg}")
+        logger.info(f"echo: {matched_topic}, {client}, {userdata}, {msg}")
 
     def handle_light_up_message(self, matched_topic, client, userdata, msg):
-        logger.info(f"LIGHTUP: {matched_topic}, {client}, {userdata}, {msg}")
+        logger.info(f"lightup: {matched_topic}, {client}, {userdata}, {msg}")
         if int(msg.payload.decode()) == 1:
             os.system(config.COMMAND_ON_LIGHT)
         elif int(msg.payload.decode()) == 0:
@@ -104,7 +103,7 @@ class MQTTClient:
         while True:
             try:
                 self._client.loop_forever(20)
-                self._client.publish("SP008/connected", 1)
+                self._client.publish(f"{self.device_name}/connected", 1)
             except Exception as e:
                 logger.opt(exception=e).info("Критическая ошибка в mqtt клиенте:")
             finally:
@@ -114,7 +113,7 @@ class MQTTClient:
                     self.reconnect_needed = False
 
     def on_message(self, client, userdata, msg):
-        logger.info(f"Пришло сообщение: {client}, {userdata}, {msg}, {msg.topic}, {msg.payload}")
+        logger.info(f"Пришло сообщение: {msg.topic}, {msg.payload}")
         msg_topic = msg.topic
         if matched_topic := self.open_message_format.match(msg_topic):
             self.handle_open_message(
@@ -153,10 +152,8 @@ class MQTTClient:
 
 
 def main():
-    print(f"{config.DEVICE_NAME}, {config.USERNAME}, {config.PASSWORD}, {config.BROKER_ADDRESS}, {config.PORT}")
     os.system(config.COMMAND_GPIO_ON_BEEPER)
     os.system(config.COMMAND_OFF_BEEPER)
-    os.system("gpio readall")
     os.system(config.COMMAND_GPIO_ON_LOCK)
     os.system(config.COMMAND_OFF_LOCK)
     os.system(config.COMMAND_GPIO_ON_LIGHT)
