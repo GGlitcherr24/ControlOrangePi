@@ -1,49 +1,62 @@
-import config
-from logger import logger
+import threading
+import time
 import os
-import gpio4
+import atexit
+import config
 
+_monitor_thread = None
+_running = False
+_pin = None
+_last_state = None
 
-class GPIOHandler:
-    def __init__(self, pin_number, pin_mode=gpio4.BOARD, pull_up_down=gpio4.PUD_UP):
-        self.pin = pin_number
-        self.mode = pin_mode
-        self.pull = pull_up_down
-        self.running = True
+def input_callback(state):
+    print(f"Пин {_pin} изменился на {state}")
+    if state == 0:
+        os.system(config.COMMAND_ON_LOCK)
+        os.system(config.COMMAND_ON_BEEPER)
+    else:
+        os.system(config.COMMAND_OFF_LOCK)
+        os.system(config.COMMAND_OFF_BEEPER)
 
-        gpio4.GPIO.setmode(self.mode)
-        gpio4.GPIO.setup(self.pin, gpio4.IN, pull_up_down=self.pull)
-        gpio4.GPIO.add_event_detect(
-            self.pin,
-            gpio4.BOTH,
-            callback=self._pin_change,
-            bouncetime=200
-        )
-        logger.info(f"GPIO: пин {self.pin} настроен (режим {pin_mode})")
+def _monitor_loop():
+    global _last_state
+    os.system(f"gpio mode {_pin} in")
 
-    def _pin_change(self, channel):
-        state = gpio4.GPIO.input(self.pin)
-        logger.info(f"GPIO: пин {channel} изменил состояние на {state}")
+    try:
+        result = os.popen(f"gpio read {_pin}").read().strip()
+        _last_state = int(result)
+    except:
+        _last_state = None
+        print("Не удалось прочитать начальное состояние пина")
 
-        if state == 1:
-            self._execute_action()
-        else:
-            self._execute_stop_action()
+    while _running:
+        try:
+            result = os.popen(f"gpio read {_pin}").read().strip()
+            current_state = int(result)
+            if current_state != _last_state:
+                _last_state = current_state
+                input_callback(current_state)
+        except Exception as e:
+            print(f"Ошибка в потоке мониторинга: {e}")
+        time.sleep(1)
 
-    @staticmethod
-    def _execute_action(self):
-        cmd = config.COMMAND_GPIO_ON_LOCK
-        logger.info(f"Выполняется команда: {cmd}")
-        os.system(cmd)
+def start_monitoring(input_pin=8):
+    global _monitor_thread, _running, _pin
+    if _running:
+        print("Мониторинг уже запущен")
+        return
+    _pin = input_pin
+    _running = True
+    _monitor_thread = threading.Thread(target=_monitor_loop)
+    _monitor_thread.daemon = False
+    _monitor_thread.start()
+    print(f"Мониторинг пина {_pin} запущен в отдельном потоке (опрос 1 сек)")
 
-    @staticmethod
-    def _execute_stop_action(self):
-        cmd = config.COMMAND_GPIO_OFF_LOCK
-        logger.info(f"Выполняется команда: {cmd}")
-        os.system(cmd)
+def stop_monitoring():
+    global _running
+    _running = False
+    if _monitor_thread and _monitor_thread.is_alive():
+        _monitor_thread.join(timeout=3)
+    print("Мониторинг остановлен")
 
-    def stop(self):
-        self.running = False
-        gpio4.GPIO.remove_event_detect(self.pin)
-        gpio4.GPIO.cleanup(self.pin)
-        logger.info("GPIO остановлен")
+atexit.register(stop_monitoring)
